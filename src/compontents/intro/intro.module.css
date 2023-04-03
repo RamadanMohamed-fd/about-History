@@ -1,0 +1,109 @@
+.intro{
+    position: relative;
+    padding-bottom: 5rem;
+    margin-top: 100vh;
+}
+@media (max-width:920px) {
+    .intro{
+      
+        margin-top: 80vh ;
+    }
+  }
+
+
+.intro, .intro__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro__bottom{
+    position: absolute;
+    top: 100%;
+    margin-top: -60px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+}
+.intro__bottom_outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.intro__content {
+    max-width: 540px;
+    width: 100%;
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.intro__content_text{
+    width: 150% !important;
+    height: 300px !important;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+}
+.intro__content_line {
+    position: relative;
+    display: inline-block;
+   width: 6px; 
+    height: 120px;
+    background-color: #dd133f;
+    -webkit-mask-image: url(../../assats/vertical-line-mask.png);
+    mask-image: url(../../assats/vertical-line-mask.png);
+    -webkit-mask-size: 6px 1500px;
+    mask-size: 6px 1500px;
+    mask-mode: alpha;
+    -webkit-mask-repeat: repeat-y;
+    mask-repeat: repeat-y;
+    -webkit-mask-position: top left;
+    mask-position: top left;
+    margin-bottom: -1rem;
+    margin-top: 0px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform .6s cubic-bezier(.165,.84,.44,1) 2.2s,opacity .8s ease-out 2.2s;
+    animation: line 1s  1.8s forwards;
+}
+@keyframes line {
+    100%{
+        opacity: 1;
+        margin-top: -80px;
+    }
+}
+h2 {
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.text_block__title {
+    color: #dd133f;
+    line-height: 130%;
+    transform: translateY(50px);
+    /* opacity: 0; */
+    transition: transform .8s cubic-bezier(.165,.84,.44,1),opacity .8s ease;
+}
+.text_block p{
+    font-size: 15px;
+    font-size: 1rem;
+    line-height: 120%;
+    color: #11325c;
+    transform: translateY(50px);
+    /* opacity: 0; */
+    transition: transform 1.2s cubic-bezier(.165,.84,.44,1),opacity 1s ease;
+}
+/* .text_block,.text_block__intro,.text_block__title, .text_block,.text_block__intro p {
+    opacity: 1;
+    transform: none;
+} */
+h1, h2, h3, h4, h5, h6 {
+    font-family: TolyerXVintageNo\.1;
+    text-transform: uppercase;
+  }

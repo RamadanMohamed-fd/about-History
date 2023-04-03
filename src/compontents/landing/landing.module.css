@@ -1,0 +1,127 @@
+*{
+scroll-behavior: smooth;
+}
+.cover{
+  float: none;
+  flex-shrink: 1;
+  display: block;
+  margin: 0px;
+  inset: 0px -17px 70px 0px;
+  position: absolute;
+  overflow: visible;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 625px;
+  padding: 0px;
+}
+img, picture {
+  border: 0;
+  vertical-align: top;
+  width: 100%;
+}
+
+.cover__image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 70px);
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: bottom center;
+  object-position: bottom center;
+  z-index: 0;
+  position: fixed;
+  opacity: 0.8;
+}
+
+.cover__main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: .9;
+  height: inherit;
+  mix-blend-mode: multiply;
+}
+.cover__header {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1024px;
+}
+
+.cover__header_title {
+  margin-bottom: 2.5rem;
+  animation: header 1s  1.2s forwards;
+  opacity: 0;
+  font-size: 5rem;
+}
+@keyframes header {
+  100%{
+    margin-top: 8.5rem;
+    opacity: 1;
+  }
+}
+.cover__header_subtitle {
+  transition-delay: 1.4s;
+  margin-bottom: 2.9rem;
+  animation: subtitle 1s  1.4s forwards;
+  opacity: 0;
+}
+@keyframes subtitle {
+  100%{
+    margin-top: -0.5rem;
+    opacity: 1;
+  }
+}
+.cover__header_illustrations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  opacity: 0;
+  animation: illustrations 1s  1.6s forwards;
+}
+@keyframes illustrations {
+  100%{
+    opacity: 1;
+  }
+}
+.cover_outer_image{
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  transition: mask-size 2.55s cubic-bezier(.33,1,.68,1) .5s;
+  mask-image: url(../../assats/burn-mask.png);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 0%;
+  animation: mask 3s  1 forwards;
+}
+@keyframes mask {
+  100%{
+    mask-size: 450%;
+  }
+}
+@media (max-width:920px) {
+  .cover_outer_image{
+    height: 150vh;
+  }
+}
+/* @media (max-width:1025px) {
+  .cover_outer_image{
+    height: 10vh;
+  }
+} */

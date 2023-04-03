@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.cover__header_illustration, .cover__header_logos, .cover__header_subtitle, .cover__header_title, .cover__side_logo {
+  transition: transform 1.4s cubic-bezier(.165,.84,.44,1),opacity 1.15s ease-out;
+  opacity: 1;
+  transform: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: TolyerXVintageNo\.1;
+  text-transform: uppercase;
+}
+body , html{
+  font-family: BulletinTypewriterMN,Courier New,Courier,monospace;
+  font-size: 18px;
+  line-height: 1.5rem;
+  color: #11325c;
+}
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1620px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 120px;
+  padding-right: 120px;
+}

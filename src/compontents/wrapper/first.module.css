@@ -1,0 +1,66 @@
+
+/* .section__first {
+    height: 200px;
+} */
+@media screen and (max-width: 1023px){
+.section__inner {
+    flex-direction: column-reverse;
+}}
+.section__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1000px;
+}
+
+.section:nth-of-type(odd) .section_lines_desktop__vertical_line {
+    left: auto;
+    right: -2px;
+}
+.section_lines_desktop__vertical_line {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 6px;
+    max-height: 250px !important;
+    background-color: #dd133f;
+    mask-image: url(../../assats/vertical-line-mask.png);
+    -webkit-mask-size: 6px 1500px;
+    mask-size: 6px 1500px;
+    mask-mode: alpha;
+    -webkit-mask-repeat: repeat-y;
+    mask-repeat: repeat-y;
+    -webkit-mask-position: top left;
+    mask-position: top center;
+    z-index: 10;
+}
+.section_lines_desktop__horizontal_line {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 50%;
+    height: 6px;
+    top: 258px;
+    background-color: #dd133f;
+    mask-image: url(../../assats/horizontal-line-mask.png);
+    mask-position: bottom right;
+    mask-size: 1500px 6px;
+    mask-mode: alpha;
+    mask-repeat: repeat-x;
+    z-index: 10;
+}
+@media (max-width:920px) {
+    .section_lines_desktop__horizontal_line{
+        width: 61%;
+        left: -67px;
+    } 
+}
+@media (max-width:720px) {
+    .section_lines_desktop__horizontal_line{
+        width: 71%;
+    } 
+}
